@@ -177,7 +177,7 @@
     </div>
 </div>
 <div region="south" style="height: 25px;padding: 5px" align="center">
-    Copyright © 2012-2017 熊平的SSM博客系统 版权所有
+    Copyright © 2018-2019 captain 版权所有
 </div>
 </body>
 </html>
