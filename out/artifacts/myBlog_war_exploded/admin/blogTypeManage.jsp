@@ -98,7 +98,7 @@
                     url = "${blog}/admin/blogType/save.do?id=" + row.id;
                 }
             },'-',{
-                iconCls: 'icon-edit',
+                iconCls: 'icon-remove',
                 text: '删除',
                 handler: function () {
                     //获取选中要删除的行

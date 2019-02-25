@@ -54,7 +54,7 @@ public class BlogTypeDaoTest {
 	@Test
 	public void  listByPage(){
 		Integer page = 1;  //第一页
-		Integer pageSize = 2;  //一页显示两条
+		Integer pageSize = 10;  //一页显示两条
 		Integer start =(page-1)*pageSize;
 		Integer end = page*pageSize;
 		List<BlogType> blogTypeList = blogTypeDao.listByPage(start,end);
