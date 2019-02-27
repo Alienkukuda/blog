@@ -3,6 +3,8 @@ package ssm.blog.service;
 import ssm.blog.entity.BlogType;
 import ssm.blog.entity.PageBean;
 
+import java.util.List;
+
 /**
  * created by Captain on 2019/2/23
  * @Description 博客类别service接口
@@ -23,5 +25,7 @@ public interface BlogTypeService {
 
 	//删除博客类别
 	public Integer deleteBlogType(Integer id);
+
+	public List<BlogType> getBlogTypeData();
 
 }

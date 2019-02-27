@@ -6,6 +6,7 @@ import ssm.blog.entity.BlogType;
 import ssm.blog.entity.PageBean;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * created by Captain on 2019/2/23
@@ -40,4 +41,6 @@ public class BlogTypeServiceImpl implements BlogTypeService {
 	public Integer deleteBlogType(Integer id) {
 		return blogTypeDao.deleteBlogType(id);
 	}
+
+	public List<BlogType> getBlogTypeData(){return  blogTypeDao.getBlogTypeData();}
 }

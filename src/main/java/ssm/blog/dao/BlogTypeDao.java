@@ -53,4 +53,9 @@ public interface BlogTypeDao {
 	 * @return
 	 */
 	Long getTotal();
+
+	/**
+	 * 获取博客类别信息
+	 */
+	public List<BlogType> getBlogTypeData();
 }
