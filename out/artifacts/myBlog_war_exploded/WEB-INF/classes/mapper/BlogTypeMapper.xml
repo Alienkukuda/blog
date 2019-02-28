@@ -59,6 +59,7 @@
     <select id="getTotal" resultType="java.lang.Long">
         SELECT COUNT(id) from db_blog.t_blogtype
     </select>
+
     <select id="getBlogTypeData" resultMap="BlogTypeResult">
         SELECT
         t2.*,

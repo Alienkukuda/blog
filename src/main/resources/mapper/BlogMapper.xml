@@ -61,10 +61,10 @@
     </insert>
 
     <update id="updateBlog" parameterType="Blog">
-        UPDATE t_blog
+        update t_blog
         <set>
             <if test="title!=null and title!=''">
-              title=#{title}
+                title=#{title},
             </if>
             <if test="summary!=null and summary!=''">
                 summary=#{summary},
@@ -85,6 +85,7 @@
                 keyWord=#{keyWord},
             </if>
         </set>
+        where id=#{id}
     </update>
 
     <delete id="deleteBlog" parameterType="java.lang.Integer">

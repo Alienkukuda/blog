@@ -85,6 +85,13 @@
          *打开修改博客界面
          */
         function openBlogModifyTab() {
+            var selectedRows = $("#dg").datagrid("getSelections");
+            if(selectedRows.length != 1) {
+                $.messager.alert("系统提示", "请选择一个要修改的博客");
+                return;
+            }
+            var row = selectedRows[0];
+            window.parent.openTab("修改博客","modifyBlog.jsp?id=" + row.id, "icon-writeblog");
         }
         /**
          * 重新载入数据
