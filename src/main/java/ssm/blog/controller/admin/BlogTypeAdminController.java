@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  **/
 @Controller
 @RequestMapping(value = "/admin/blogType")
-public class BlogTypeController {
+public class BlogTypeAdminController {
 
 	@Resource
 	private BlogTypeService blogTypeService;

@@ -1,13 +1,11 @@
-package ssm.blog.dao;
+package ssm.blog.service;
 
-import org.springframework.stereotype.Repository;
 import ssm.blog.entity.Blogger;
 
 /**
- * created by Captain on 2019/1/8
+ * created by Captain on 2019/3/2
  **/
-@Repository
-public interface BloggerDao {
+public interface BloggerService {
 	/**
 	 * 查询博主信息
 	 * @return

@@ -91,7 +91,7 @@
                 return;
             }
             var row = selectedRows[0];
-            window.parent.openTab("修改博客","modifyBlog.jsp?id=" + row.id, "icon-writeblog");
+            window.parent.openTab("修改博客","modifyBlog.jsp?id=" + row.id, "icon-writeblog");//传值 可以用param.id获得
         }
         /**
          * 重新载入数据

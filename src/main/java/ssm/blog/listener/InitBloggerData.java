@@ -8,6 +8,7 @@ import ssm.blog.entity.BlogType;
 import ssm.blog.entity.Blogger;
 import ssm.blog.service.BlogService;
 import ssm.blog.service.BlogTypeService;
+import ssm.blog.service.BloggerService;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
@@ -32,10 +33,15 @@ public class InitBloggerData implements ServletContextListener, ApplicationConte
 		//获取博主信息service
 		BlogService blogService = applicationContext.getBean(BlogService.class);
 		//获取博客信息
+		BloggerService bloggerService = applicationContext.getBean(BloggerService.class);
+		//获取博客service
 		List<BlogType> blogTypeList = blogTypeService.getBlogTypeData();
 		application.setAttribute("blogTypeList", blogTypeList);
+		//获取博主信息
+		Blogger blogger = bloggerService.getBloggerData();
 		//隐藏密码
-
+		blogger.setPassword(null);
+		application.setAttribute("blogger",blogger);
 	}
 
 	public void contextDestroyed(ServletContextEvent sce) {
