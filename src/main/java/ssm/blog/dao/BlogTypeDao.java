@@ -57,5 +57,5 @@ public interface BlogTypeDao {
 	/**
 	 * 获取博客类别信息
 	 */
-	public List<BlogType> getBlogTypeData();
+	List<BlogType> getBlogTypeData();
 }

@@ -80,33 +80,33 @@
                 <td>
                     <script id="profile" type="text/plain" style="width:95%; height:300px;"></script>
                     <input type="hidden" id="pf" name="profile"> <%-- UEditor不能作为表单的一部分提交，所以用这种隐藏域的方式 --%>
-                        </td>
-                        </tr>
-                        <tr>
-                        <td></td>
-                        <td><a href="javascript:submitData()" class="easyui-linkbutton"
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href="javascript:submitData()" class="easyui-linkbutton"
                     data-options="iconCls:'icon-submit'">提交</a></td>
-                    </tr>
-                    </table>
-                    </form>
-                    </div>
-                    <script>
-                    var ue = UE.getEditor('profile');
-                    ue.addListener('ready',function () {
-                        UE.ajax.request('${blog}/admin/blogger/getBloggerInfo.do',{
-                            method: "post",
-                            async: false,
-                            data: {},
-                            onsuccess: function(result) {
-                                //result = eval("(" + result.responseText + ")");
-                                result = JSON.parse(result.responseText);
-                                $("#nickName").val(result.nickName);
-                                $("#sign").val(result.sign);
-                                UE.getEditor('profile').setContent(result.profile);
-                            }
-                        })
-                    })
-                    </script>
+            </tr>
+        </table>
+    </form>
+    </div>
+    <script>
+    var ue = UE.getEditor('profile');
+    ue.addListener('ready',function () {
+        UE.ajax.request('${blog}/admin/blogger/getBloggerInfo.do',{
+            method: "post",
+            async: false,
+            data: {},
+            onsuccess: function(result) {
+                // result = eval("(" + result.responseText + ")");
+                result = JSON.parse(result.responseText);
+                $("#nickName").val(result.nickName);
+                $("#sign").val(result.sign);
+                UE.getEditor('profile').setContent(result.profile);
+            }
+        })
+    })
+    </script>
 
 </body>
 </html>

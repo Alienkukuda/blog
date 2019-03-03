@@ -11,6 +11,7 @@
         <!-- 普通属性映射-->
         <result property="typeName" column="type_name"/>
         <result property="orderNum" column="order_num"/>
+        <result property="blogCount" column="blogCount"/>
     </resultMap>
     <!-- id为具体实现接口中的方法名-->
     <insert id="addBlogType" parameterType="BlogType" keyProperty="id" useGeneratedKeys="true">
