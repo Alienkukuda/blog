@@ -35,6 +35,7 @@
         <url-pattern>*.html</url-pattern>
     </servlet-mapping>
 
+
     <!-- 编码过滤器 -->
     <filter>
         <filter-name>encodingFilter</filter-name>

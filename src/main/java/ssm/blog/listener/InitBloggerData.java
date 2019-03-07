@@ -24,7 +24,7 @@ import java.util.List;
 public class InitBloggerData implements ServletContextListener, ApplicationContextAware {
 
 	private static ApplicationContext applicationContext;
-	
+
 	public void contextInitialized(ServletContextEvent sce) {
 		//先获取servlet上下文
 		ServletContext application = sce.getServletContext();
@@ -46,10 +46,10 @@ public class InitBloggerData implements ServletContextListener, ApplicationConte
 
 	public void contextDestroyed(ServletContextEvent sce) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
-	public void setApplicationContext(ApplicationContext applicationContext) 
+	public void setApplicationContext(ApplicationContext applicationContext)
 			throws BeansException {
 		InitBloggerData.applicationContext = applicationContext;
 	}

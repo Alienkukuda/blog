@@ -24,6 +24,8 @@ public class Blog {
 
 	private List<String> imageList = new LinkedList<String>();//博客里存的图片，主要用于展示缩略图
 
+	public Blog(Integer id) { this.id = id; }
+
 	public Integer getId() {
 		return id;
 	}
