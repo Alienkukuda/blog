@@ -35,4 +35,16 @@ public interface BlogService {
 
 	long getTotal(Map<String, Object> map);
 
+	/**
+	 * 获取上一篇博客
+	 * @param id
+	 * @return
+	 */
+	Blog getPrevBlog(Integer id);
+	/**
+	 * 获取下一篇博客
+	 * @param id
+	 * @return
+	 */
+	Blog getNextBlog(Integer id);
 }

@@ -16,6 +16,7 @@ public class Blog {
 	private Integer clickHit; //评论次数
 	private Integer replyHit; //回复次数
 	private String content; //博客内容
+	private String contentNoTag; //不带标签的博客内容，用于Lucene索引中
 	private String keyWord; //关键字，用空格隔开
 
 	private BlogType blogType; //博客类型
@@ -25,6 +26,20 @@ public class Blog {
 	private List<String> imageList = new LinkedList<String>();//博客里存的图片，主要用于展示缩略图
 
 	public Blog(Integer id) { this.id = id; }
+
+	public Blog() {}
+
+	public Blog(Integer id, String title, String summary, Date releaseDate, Integer clickHit, Integer replyHit, String content, String keyWord, BlogType blogType) {
+		this.id = id;
+		this.title = title;
+		this.summary = summary;
+		this.releaseDate = releaseDate;
+		this.clickHit = clickHit;
+		this.replyHit = replyHit;
+		this.content = content;
+		this.keyWord = keyWord;
+		this.blogType = blogType;
+	}
 
 	public Integer getId() {
 		return id;
@@ -98,11 +113,35 @@ public class Blog {
 		this.blogType = blogType;
 	}
 
+	public Integer getBlogCount() {
+		return blogCount;
+	}
+
+	public void setBlogCount(Integer blogCount) {
+		this.blogCount = blogCount;
+	}
+
+	public String getReleaseDateStr() {
+		return releaseDateStr;
+	}
+
+	public void setReleaseDateStr(String releaseDateStr) {
+		this.releaseDateStr = releaseDateStr;
+	}
+
 	public List<String> getImageList() {
 		return imageList;
 	}
 
 	public void setImageList(List<String> imageList) {
 		this.imageList = imageList;
+	}
+
+	public String getContentNoTag() {
+		return contentNoTag;
+	}
+
+	public void setContentNoTag(String contentNoTag) {
+		this.contentNoTag = contentNoTag;
 	}
 }

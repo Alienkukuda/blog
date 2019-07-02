@@ -54,11 +54,17 @@ public class BlogServiceImpl implements BlogService{
 		return blogDao.deleteBlog(id);
 	}
 
-	public Blog getById(Integer id) {
-		return blogDao.getById(id);
-	}
+	public Blog getById(Integer id) { return blogDao.getById(id); }
 
 	public long getTotal(Map<String, Object> map) {
 		return blogDao.getTotal(map);
+	}
+
+	public Blog getPrevBlog(Integer id) {
+		return blogDao.getPrevBlog(id);
+	}
+
+	public Blog getNextBlog(Integer id) {
+		return blogDao.getNextBlog(id);
 	}
 }
