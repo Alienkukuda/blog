@@ -1,2 +1,3 @@
 # blog
-finish my own blog at home
+利用 SSM 实现博客系统
+
